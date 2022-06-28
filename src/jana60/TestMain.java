@@ -1,18 +1,16 @@
 package jana60;
-import java.util.Scanner;
 public class TestMain {
 
-	public static void main(String[] args) {
-		 Scanner scan=new Scanner(System.in);		
-		 
+	public static void main(String[] args) throws Exception {
+		try {		 
 	      System.out.println("Esempio di rettangolo con base 5 e altezza 10 : ");
 	      Rettangolo n=new Rettangolo(5,10);
 	      
 	      System.out.println(n.toString());
 	      
-	      System.out.println("Esempio di quadrato con base 7 e altezza 14 : ");
+	      System.out.println("Esempio di quadrato lato 14: ");
 	    
-	      Quadrato q=new Quadrato(7,14);
+	      Quadrato q=new Quadrato(14);
 	      
 	      System.out.println(q.toString());
 	      
@@ -21,8 +19,12 @@ public class TestMain {
 	      Triangolo t=new Triangolo(5,10,10,8);
 	      
 	      System.out.println(t.toString());
-	      scan.close();
 	      
+	} catch (Exception e)
+		{
+		System.out.println("C'è un errore, riprova. ");
+		System.out.println(e.getMessage());
+		}
+		
 	}
-
 }
